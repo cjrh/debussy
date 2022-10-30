@@ -8,14 +8,7 @@ internet radio. The app is detected, and then each track change is received,
 and logged, and a json payload generated:
 
 ```bash
-$ RUST_LOG=info cargo run
-   Compiling itoa v1.0.4
-   Compiling ryu v1.0.11
-   Compiling serde v1.0.147
-   Compiling serde_json v1.0.87
-   Compiling debussy v0.1.0 (/home/caleb/tmp/dbustest/debussy)
-    Finished dev [unoptimized + debuginfo] target(s) in 4.28s
-     Running `target/debug/debussy`
+$ RUST_LOG=info debussy
  INFO  debussy > Found Shortwave (on bus org.mpris.MediaPlayer2.de.haeckerfelix.Shortwave)
  INFO  debussy > Radio Paradise (320k)::::Mark Knopfler - Don't You Get It
 {"player":"Radio Paradise (320k)","artist":"Radio Paradise (320k)","title":"Mark Knopfler - Don't You Get It"}
@@ -26,7 +19,7 @@ output can be received by other tools in a unix pipeline. For example, streaming
 the json data to the program _jq_:
 
 ```bash
-$ cargo run -- | jq
+$ debussy | jq
    Compiling debussy v0.1.0 (/home/caleb/tmp/dbustest/debussy)
     Finished dev [unoptimized + debuginfo] target(s) in 0.63s
      Running `target/debug/debussy`
