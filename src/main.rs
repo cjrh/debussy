@@ -18,6 +18,10 @@ fn main() -> Result<()> {
     debug!("Showing event stream for player {}", &player.identity());
 
     let metadata = get_metadata(&player)?;
+    // To be able to emit json for the full metadata objects,
+    // this feature must be added:
+    // https://github.com/Mange/mpris-rs/issues/45
+    // let x = serde_json::to_string(&metadata)?;
     debug!("Metadata: {metadata:?}");
     output_track(&metadata, true);
 
