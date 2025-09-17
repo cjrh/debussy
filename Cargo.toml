@@ -10,5 +10,5 @@ anyhow = "1.0.99"
 log = "0.4.28"
 mpris = { git = "https://github.com/Mange/mpris-rs" }
 pretty_env_logger = "0.5.0"
-serde = { version="1.0.219", features=["serde_derive"]}
+serde = { version="1.0.225", features=["serde_derive"]}
 serde_json = "1.0.145"
