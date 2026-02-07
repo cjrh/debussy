@@ -6,7 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-anyhow = "1.0.100"
+anyhow = "1.0.101"
 log = "0.4.29"
 mpris = { git = "https://github.com/Mange/mpris-rs" }
 pretty_env_logger = "0.5.0"
